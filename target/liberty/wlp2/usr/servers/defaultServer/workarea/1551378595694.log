@@ -1,0 +1,24 @@
+!SESSION 2019-02-28 15:29:55.715 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=10.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+
+!ENTRY org.eclipse.osgi 2 0 2019-02-28 15:29:55.715
+!MESSAGE The property 'osgi.configuration.area' with the value '/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/workarea' is being overriden by the OSGi standard configuration property 'org.osgi.framework.storage' with the value '/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/workarea'.
+!STACK 0
+java.lang.IllegalArgumentException: The property 'osgi.configuration.area' with the value '/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/workarea' is being overriden by the OSGi standard configuration property 'org.osgi.framework.storage' with the value '/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/workarea'.
+	at org.eclipse.osgi.internal.location.EquinoxLocations.<init>(EquinoxLocations.java:87)
+	at org.eclipse.osgi.internal.framework.EquinoxConfiguration.<init>(EquinoxConfiguration.java:538)
+	at org.eclipse.osgi.internal.framework.EquinoxContainer.<init>(EquinoxContainer.java:67)
+	at org.eclipse.osgi.launch.Equinox.<init>(Equinox.java:34)
+	at org.eclipse.osgi.launch.EquinoxFactory.newFramework(EquinoxFactory.java:27)
+	at com.ibm.ws.kernel.launch.internal.FrameworkManager.startFramework(FrameworkManager.java:557)
+	at com.ibm.ws.kernel.launch.internal.FrameworkManager.launchFramework(FrameworkManager.java:260)
+	at com.ibm.ws.kernel.launch.internal.LauncherDelegateImpl.doFrameworkLaunch(LauncherDelegateImpl.java:114)
+	at com.ibm.ws.kernel.launch.internal.LauncherDelegateImpl.launchFramework(LauncherDelegateImpl.java:100)
+	at com.ibm.ws.kernel.boot.internal.KernelBootstrap.go(KernelBootstrap.java:211)
+	at com.ibm.ws.kernel.boot.Launcher.handleActions(Launcher.java:242)
+	at com.ibm.ws.kernel.boot.Launcher.createPlatform(Launcher.java:117)
+	at com.ibm.ws.kernel.boot.cmdline.EnvCheck.main(EnvCheck.java:59)
+	at com.ibm.ws.kernel.boot.cmdline.EnvCheck.main(EnvCheck.java:35)

@@ -121,6 +121,7 @@ public class ResourceServletVinic {
 		
 		
 		JsonObject resultObject = new JsonObject();
+		JsonObject jsonTimeStats = new JsonObject(); 
 		JsonArray jsonArray = new JsonArray();
 
 		//Return all records
@@ -202,15 +203,20 @@ public class ResourceServletVinic {
 				}else {
 				
 					for(Integer i = 0; i < issues.size(); i++) {
-						
-						//System.out.println("Issue" + i.toString() +" = " + issues.get(i).title + "-" + issues.get(i).assignee.name + "-" + issues.get(i).updated_at + "-" + issues.get(i).time_stats.human_time_estimate + "-" + issues.get(i).confidential );
-						
+											
 						JsonObject jsonObject = new JsonObject();
-						
 						jsonObject.addProperty("id", issues.get(i).id + "");
 						jsonObject.addProperty("name", issues.get(i).assignee.name + "");
 						jsonObject.addProperty("value", issues.get(i).title + "");
 						jsonObject.addProperty("role", issues.get(i).updated_at + "");
+						
+						jsonTimeStats = new JsonObject();
+						jsonTimeStats.addProperty("time_estimate", issues.get(i).time_stats.time_estimate);
+						jsonTimeStats.addProperty("total_time_spent", issues.get(i).time_stats.total_time_spent);
+						jsonTimeStats.addProperty("human_time_estimate", issues.get(i).time_stats.human_time_estimate);
+						jsonTimeStats.addProperty("human_time_estimate", issues.get(i).time_stats.human_total_time_spent);
+						
+						jsonObject.add("timeStats", jsonTimeStats);
 						
 						if(issues.get(i).labels.length > 0)
 						{
@@ -219,6 +225,7 @@ public class ResourceServletVinic {
 							jsonObject.addProperty("band", "");
 						}
 						
+						System.out.println("JsonObjectCreated");
 						System.out.println(jsonObject);
 						
 						jsonArray.add(jsonObject);

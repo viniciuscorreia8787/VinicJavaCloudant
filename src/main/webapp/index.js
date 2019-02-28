@@ -11,6 +11,7 @@ function encodeUriAndQuotes(untrustedStr) {
 	return encodeURI(String(untrustedStr)).replace(/'/g, '%27').replace(')', '%29');
 }
 
+/***** REMOVE
 function loadItems(cmd){
 		
 	if(cmd != ''){
@@ -60,6 +61,7 @@ function loadItems(cmd){
 
 	});
 }
+****/
 
 function startProgressIndicator(row)
 {
@@ -350,6 +352,7 @@ function executeSearchByAssignee(){
 			for(i = 0; i < items.length; ++i){
 				addItem(items[i], !hasItems);
 			}
+			drawChart(items);
 		// If has no items, show message
 		} else {
 			alert("Not found");
@@ -378,3 +381,51 @@ function stopLoadingMessage()
 {
 	document.getElementById('loadingImage').innerHTML = "";
 }
+
+	
+//Draw Chart - Uses Google Chart JS
+function drawChart(items) {
+		
+	// Create the data table.
+	var data = new google.visualization.DataTable();
+	data.addColumn('string', 'Assignees');
+	data.addColumn('number', 'Hours Spent');
+	
+	
+	var flgFound = false;
+	
+	// Calculate total time spent by assignee
+	// Loop Issues
+	for(var i = 0; i < items.length; ++i){
+		
+		flgFound = false;
+		
+		// Loop Data Rows
+		for(var j = 0; j < data.getNumberOfRows(); j++){
+			
+			// If assignee already in data row, sum total time spent
+			if(data.wg[j].c[0].v == sanitizeInput(items[i].name)){
+				flgFound = true;
+				data.wg[j].c[1].v += (items[i].timeStats.total_time_spent/3600); //seconds per hour
+			}
+		}
+		
+		// If new assignee, create new data row
+		if(!flgFound){
+			data.addRow([sanitizeInput(items[i].name) , items[i].timeStats.total_time_spent/3600]); //seconds per hour
+		}
+	}	
+
+	// Set chart options
+	var options = {'title':'Issues By Assignee',
+			'width':500,
+			'height':300};
+
+	// Instantiate and draw our chart, passing in some options.
+	var barchart = new google.visualization.BarChart(document.getElementById('bar_chart_div'));
+	var piechart = new google.visualization.PieChart(document.getElementById('pie_chart_div'));
+	barchart.draw(data, options);
+	piechart.draw(data, options);
+}
+
+

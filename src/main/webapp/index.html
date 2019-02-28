@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dashboards Gitlab</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport"
-	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<link rel="stylesheet" href="style.css" />
+	<title>Dashboards Gitlab</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="style.css" />
+	
+	<!-- Google Charts -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+	    // Load the Visualization API and the corechart package.
+	    google.charts.load('current', {'packages':['corechart']});
+	    // Set a callback to run when the Google Visualization API is loaded.
+	    google.charts.setOnLoadCallback(drawChart);
+	    function drawChart(){}
+	</script>
+ 	<!-- Google Charts End -->	
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="index.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="banner">
 			<img class="newappIcon" src="images/newapp-icon.png">
-			<p class="appTitle">Dashboards Gitlab 1.0</p>
+			<p class="appTitle">Dashboards Gitlab 1.1</p>
 		</div>
 		<div>
 			<table>
@@ -25,11 +38,9 @@
 					<td><input type="Text" name="createdAt" id="createdAt"></td>
 				</tr>
 			</table>
-			</table>
 			<a class="button" onclick="executeSearchByAssignee()">Search 1</a>
-			<!--  input type="Submit" onclick="executeSearchByAssignee()" title="Search By Assignee" value="Search"> -->
-
 		</div>
+		<table><tr><td align="center"><div id="bar_chart_div"></td><td align="center"></div><div id="pie_chart_div"></div></td></tr></table>
 		<section>
 			<table id='notes' class='records' border='0' cellspacing='0'
 				cellpadding='0'>
@@ -45,14 +56,7 @@
 			<br>
 			<div id="errorDiv" class='errorMsg'></div>
 		</footer>
-		<script type="text/javascript" src="util.js"></script>
-		<script type="text/javascript" src="index.js"></script>
-		<div id="myImage">
-			<div id="innerImg"></div>
-		</div>
-		<br>
-		<br>
-		<br>
+
 	</div>
 </body>
 </html>
