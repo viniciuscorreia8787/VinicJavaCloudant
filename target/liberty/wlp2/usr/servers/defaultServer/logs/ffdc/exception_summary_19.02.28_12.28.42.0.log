@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1   28/02/19 12:28:41:966 BRT   28/02/19 12:28:41:966 BRT com.cloudant.client.org.lightcouch.NoDocumentException com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1105
+                                                                            - /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/ffdc/ffdc_19.02.28_12.28.41.0.log
+------+------+---------------------------+---------------------------+---------------------------

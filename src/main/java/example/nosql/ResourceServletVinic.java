@@ -202,7 +202,8 @@ public class ResourceServletVinic {
 				}else {
 				
 					for(Integer i = 0; i < issues.size(); i++) {
-						System.out.println("Issue" + i.toString() +" = " + issues.get(i).title + "-" + issues.get(i).assignee.name + "-" + issues.get(i).updated_at + "-" + issues.get(i).time_stats.human_time_estimate + "-" + issues.get(i).confidential );
+						
+						//System.out.println("Issue" + i.toString() +" = " + issues.get(i).title + "-" + issues.get(i).assignee.name + "-" + issues.get(i).updated_at + "-" + issues.get(i).time_stats.human_time_estimate + "-" + issues.get(i).confidential );
 						
 						JsonObject jsonObject = new JsonObject();
 						
@@ -217,6 +218,8 @@ public class ResourceServletVinic {
 						} else {
 							jsonObject.addProperty("band", "");
 						}
+						
+						System.out.println(jsonObject);
 						
 						jsonArray.add(jsonObject);
 	

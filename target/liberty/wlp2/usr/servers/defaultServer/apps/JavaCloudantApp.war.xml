@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/WebContent" targetInArchive="/"/>
+    <dir sourceOnDisk="/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/m2e-wtp/web-resources" targetInArchive="/"/>
+    <dir sourceOnDisk="/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/src/main/webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/src" targetInArchive="/WEB-INF/classes"/>
+    <dir sourceOnDisk="/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/classes" targetInArchive="/WEB-INF/classes"/>
+    <dir sourceOnDisk="/home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/test-classes" targetInArchive="/WEB-INF/classes"/>
+    <file sourceOnDisk="/home/vinic/.m2/repository/com/cloudant/cloudant-client/2.7.0/cloudant-client-2.7.0.jar" targetInArchive="/WEB-INF/lib/cloudant-client-2.7.0.jar"/>
+    <file sourceOnDisk="/home/vinic/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar" targetInArchive="/WEB-INF/lib/gson-2.7.jar"/>
+    <file sourceOnDisk="/home/vinic/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" targetInArchive="/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <file sourceOnDisk="/home/vinic/.m2/repository/com/cloudant/cloudant-http/2.7.0/cloudant-http-2.7.0.jar" targetInArchive="/WEB-INF/lib/cloudant-http-2.7.0.jar"/>
+    <file sourceOnDisk="/home/vinic/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar" targetInArchive="/WEB-INF/lib/commons-io-2.4.jar"/>
+</archive>

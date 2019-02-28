@@ -1,0 +1,558 @@
+********************************************************************************
+product = WebSphere Application Server 19.0.0.1 (wlp-1.0.24.cl190120190124-2339)
+wlp.install.dir = /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/
+java.home = /usr/lib/jvm/java-11-openjdk-amd64
+java.version = 10.0.2
+java.runtime = OpenJDK Runtime Environment (10.0.2+13-Ubuntu-1ubuntu0.18.04.4)
+os = Linux (4.18.0-15-generic; amd64) (en_US)
+process = 9781@vinic-HP-Pavilion-Sleekbook-14
+********************************************************************************
+[28/02/19 10:27:58:238 BRT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[28/02/19 10:27:58:266 BRT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/19.0.0.1/lafiles/en.html
+[28/02/19 10:28:00:060 BRT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 2,773 seconds
+[28/02/19 10:28:00:128 BRT] 0000001b com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[28/02/19 10:28:03:627 BRT] 00000014 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[28/02/19 10:28:04:303 BRT] 00000016 com.ibm.ws.ssl.config.WSKeyStore                             I CWPKI0819I: The default keystore is not created because a password is not configured on the <keyStore id="defaultKeyStore"/> element, and the 'keystore_password' environment variable is not set. 
+[28/02/19 10:28:04:402 BRT] 0000001e com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 0,073 seconds.
+[28/02/19 10:28:04:452 BRT] 00000014 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been activated. 
+[28/02/19 10:28:05:363 BRT] 00000014 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[28/02/19 10:28:05:819 BRT] 00000023 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 9080.
+[28/02/19 10:28:06:743 BRT] 00000014 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[28/02/19 10:28:06:746 BRT] 00000014 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[28/02/19 10:28:06:747 BRT] 00000014 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[28/02/19 10:28:07:515 BRT] 0000001e com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application JavaCloudantApp.
+[28/02/19 10:28:08:986 BRT] 0000001e org.jboss.weld.Version                                       I WELD-000900: 2.4.8 (Final)
+[28/02/19 10:28:09:726 BRT] 0000001e com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[28/02/19 10:28:09:780 BRT] 0000001e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Cloudant DB Web Starter.
+[28/02/19 10:28:09:784 BRT] 0000001e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Cloudant DB Web Starter has been bound to default_host.
+[28/02/19 10:28:09:786 BRT] 0000001e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 10:28:09:846 BRT] 0000001e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application JavaCloudantApp started in 2,332 seconds.
+[28/02/19 10:28:10:080 BRT] 0000001b com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [jsp-2.3, ejbLite-3.2, managedBeans-1.0, servlet-3.1, jsf-2.2, beanValidation-1.1, ssl-1.0, jndi-1.0, appSecurity-2.0, jsonp-1.0, jdbc-4.1, jaxrs-2.0, el-3.0, jaxrsClient-2.0, json-1.0, jpaContainer-2.1, cdi-1.2, distributedMap-1.0, webProfile-7.0, websocket-1.1, jpa-2.1].
+[28/02/19 10:28:10:081 BRT] 0000001b com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 10,020 seconds.
+[28/02/19 10:28:10:081 BRT] 0000001b com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The server defaultServer is ready to run a smarter planet.
+[28/02/19 10:28:10:132 BRT] 0000001f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/JavaCloudantApp
+[28/02/19 10:28:10:182 BRT] 0000001f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[28/02/19 10:28:10:767 BRT] 0000001f com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[28/02/19 10:28:10:794 BRT] 00000020 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 10:28:11:494 BRT] 0000001f .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] I Setting the server's publish address to be /api/
+[28/02/19 10:28:11:900 BRT] 0000001f com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [JavaCloudantApp] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Initialization successful.
+[28/02/19 10:28:27:751 BRT] 0000002d com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I: Starting server configuration update.
+[28/02/19 10:28:27:883 BRT] 00000036 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[28/02/19 10:28:27:932 BRT] 0000002b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 10:28:27:936 BRT] 0000002b com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [JavaCloudantApp] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Destroy successful.
+[28/02/19 10:28:28:096 BRT] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application JavaCloudantApp has stopped successfully.
+[28/02/19 10:28:28:227 BRT] 00000038 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 10:28:29:128 BRT] 0000001e com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I: The server configuration was successfully updated in 1,379 seconds.
+[28/02/19 10:28:29:176 BRT] 00000036 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [localConnector-1.0].
+[28/02/19 10:28:29:177 BRT] 00000036 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0008I: Feature update completed in 1,377 seconds.
+[28/02/19 10:28:45:021 BRT] 0000003a com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I: Starting server configuration update.
+[28/02/19 10:28:45:081 BRT] 00000038 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I: The server configuration was successfully updated in 0,059 seconds.
+[28/02/19 10:28:45:086 BRT] 00000037 com.ibm.ws.app.manager.AppMessageHelper                      W CWWKZ0014W: The application VinicJavaCloudant could not be started as it could not be found at location JavaCloudantApp.war.
+[28/02/19 10:28:46:391 BRT] 00000037 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application VinicJavaCloudant.
+[28/02/19 10:28:47:545 BRT] 00000037 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Cloudant DB Web Starter.
+[28/02/19 10:28:47:545 BRT] 00000037 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Cloudant DB Web Starter has been bound to default_host.
+[28/02/19 10:28:47:545 BRT] 00000037 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 10:28:47:561 BRT] 00000037 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application VinicJavaCloudant started in 1,170 seconds.
+[28/02/19 10:28:47:739 BRT] 00000036 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 10:28:47:809 BRT] 0000001e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/JavaCloudantApp
+[28/02/19 10:28:47:810 BRT] 0000001e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[28/02/19 10:28:48:148 BRT] 0000001e .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] I Setting the server's publish address to be /api/
+[28/02/19 10:28:48:178 BRT] 0000001e com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Initialization successful.
+[28/02/19 10:29:46:203 BRT] 0000006e SystemOut                                                    O VCAP_SERVICES env var doesn't exist: running locally.
+[28/02/19 10:29:46:211 BRT] 0000006e SystemOut                                                    O Connecting to Cloudant : 565beb36-f62a-46c8-bb8d-b86f437473fc-bluemix
+[28/02/19 10:29:48:377 BRT] 0000006e SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2019" } } }
+[28/02/19 10:29:48:649 BRT] 0000006e SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 10:29:48:661 BRT] 0000006e SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 10:34:02:294 BRT] 0000014a SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2019" } } }
+[28/02/19 10:34:03:300 BRT] 0000014a SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 10:34:03:301 BRT] 0000014a SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 11:16:58:325 BRT] 000007e1 SystemOut                                                    O query = { "selector": { "assignee.name": "asd","updated_at": { "$regex": "123" } } }
+[28/02/19 11:17:15:791 BRT] 000007f2 SystemOut                                                    O query = { "selector": { "assignee.name": "Veridiana Morassi","updated_at": { "$regex": "2" } } }
+[28/02/19 11:17:16:290 BRT] 000007f2 SystemOut                                                    O Issue0 = Atualização serviço envio documento filenet-Veridiana Morassi-2019-01-21T13:24:23.186Z-2h-false
+[28/02/19 11:17:55:764 BRT] 00000824 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 11:17:55:767 BRT] 00000824 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Destroy successful.
+[28/02/19 11:17:55:816 BRT] 00000824 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application VinicJavaCloudant has stopped successfully.
+[28/02/19 11:17:55:838 BRT] 00000824 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application VinicJavaCloudant.
+[28/02/19 11:17:55:882 BRT] 00000813 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 11:17:56:675 BRT] 00000824 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Cloudant DB Web Starter.
+[28/02/19 11:17:56:676 BRT] 00000824 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Cloudant DB Web Starter has been bound to default_host.
+[28/02/19 11:17:56:676 BRT] 00000824 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 11:17:56:720 BRT] 00000824 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application VinicJavaCloudant updated in 0,882 seconds.
+[28/02/19 11:17:56:789 BRT] 00000825 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/JavaCloudantApp
+[28/02/19 11:17:56:790 BRT] 00000825 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[28/02/19 11:17:56:801 BRT] 00000826 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 11:17:56:983 BRT] 00000825 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] I Setting the server's publish address to be /api/
+[28/02/19 11:17:57:015 BRT] 00000825 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Initialization successful.
+[28/02/19 11:18:06:242 BRT] 00000834 SystemOut                                                    O VCAP_SERVICES env var doesn't exist: running locally.
+[28/02/19 11:18:06:243 BRT] 00000834 SystemOut                                                    O Connecting to Cloudant : 565beb36-f62a-46c8-bb8d-b86f437473fc-bluemix
+[28/02/19 11:18:07:623 BRT] 00000834 SystemOut                                                    O query = { "selector": { "assignee.name": "asd","updated_at": { "$regex": "2" } } }
+[28/02/19 11:23:49:384 BRT] 00000902 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 11:23:49:400 BRT] 00000902 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Destroy successful.
+[28/02/19 11:23:49:468 BRT] 00000902 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application VinicJavaCloudant has stopped successfully.
+[28/02/19 11:23:49:487 BRT] 00000902 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application VinicJavaCloudant.
+[28/02/19 11:23:49:534 BRT] 00000903 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 11:23:50:875 BRT] 00000902 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Cloudant DB Web Starter.
+[28/02/19 11:23:50:875 BRT] 00000902 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Cloudant DB Web Starter has been bound to default_host.
+[28/02/19 11:23:50:875 BRT] 00000902 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 11:23:50:912 BRT] 00000902 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application VinicJavaCloudant updated in 1,425 seconds.
+[28/02/19 11:23:51:005 BRT] 00000900 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 11:23:51:006 BRT] 000008d8 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/JavaCloudantApp
+[28/02/19 11:23:51:006 BRT] 000008d8 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[28/02/19 11:23:51:276 BRT] 000008d8 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] I Setting the server's publish address to be /api/
+[28/02/19 11:23:51:311 BRT] 000008d8 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Initialization successful.
+[28/02/19 11:24:06:873 BRT] 0000090f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 11:24:06:875 BRT] 0000090f com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Destroy successful.
+[28/02/19 11:24:06:913 BRT] 0000090f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application VinicJavaCloudant has stopped successfully.
+[28/02/19 11:24:06:946 BRT] 0000090f com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application VinicJavaCloudant.
+[28/02/19 11:24:06:992 BRT] 000008d8 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 11:24:07:840 BRT] 0000090f com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Cloudant DB Web Starter.
+[28/02/19 11:24:07:841 BRT] 0000090f com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Cloudant DB Web Starter has been bound to default_host.
+[28/02/19 11:24:07:842 BRT] 0000090f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 11:24:07:852 BRT] 0000090f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application VinicJavaCloudant updated in 0,905 seconds.
+[28/02/19 11:24:07:928 BRT] 00000910 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 11:24:07:935 BRT] 00000902 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/JavaCloudantApp
+[28/02/19 11:24:07:936 BRT] 00000902 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[28/02/19 11:24:08:061 BRT] 00000902 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] I Setting the server's publish address to be /api/
+[28/02/19 11:24:08:082 BRT] 00000902 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Initialization successful.
+[28/02/19 11:47:24:198 BRT] 00000c72 SystemOut                                                    O VCAP_SERVICES env var doesn't exist: running locally.
+[28/02/19 11:47:24:199 BRT] 00000c72 SystemOut                                                    O Connecting to Cloudant : 565beb36-f62a-46c8-bb8d-b86f437473fc-bluemix
+[28/02/19 11:47:25:630 BRT] 00000c72 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 11:47:25:834 BRT] 00000c72 SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 11:47:25:835 BRT] 00000c72 SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 11:48:28:547 BRT] 00000cc0 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 11:48:29:656 BRT] 00000cc0 SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 11:48:29:657 BRT] 00000cc0 SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 11:49:07:774 BRT] 00000cea SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 11:49:08:582 BRT] 00000cea SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 11:49:08:584 BRT] 00000cea SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 11:50:37:274 BRT] 00000d1d SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 11:50:38:247 BRT] 00000d1d SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 11:50:38:248 BRT] 00000d1d SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 11:50:39:976 BRT] 00000d23 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 11:50:40:157 BRT] 00000d23 SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 11:50:40:159 BRT] 00000d23 SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 11:51:16:089 BRT] 00000d2d SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 11:51:16:881 BRT] 00000d2d SystemOut                                                    O Issue0 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 11:51:16:883 BRT] 00000d2d SystemOut                                                    O Issue1 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:02:34:342 BRT] 00000ee4 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:02:34:875 BRT] 00000ee4 SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:02:34:876 BRT] 00000ee4 SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:02:34:877 BRT] 00000ee4 SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:02:34:878 BRT] 00000ee4 SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:02:34:879 BRT] 00000ee4 SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:02:34:880 BRT] 00000ee4 SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:03:45:584 BRT] 00000efe SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:03:46:691 BRT] 00000efe SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:03:46:692 BRT] 00000efe SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:03:46:693 BRT] 00000efe SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:03:46:694 BRT] 00000efe SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:03:46:695 BRT] 00000efe SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:03:46:695 BRT] 00000efe SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:05:34:346 BRT] 00000f56 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:05:35:311 BRT] 00000f56 SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:05:35:312 BRT] 00000f56 SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:05:35:312 BRT] 00000f56 SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:05:35:313 BRT] 00000f56 SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:05:35:313 BRT] 00000f56 SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:05:35:314 BRT] 00000f56 SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:06:27:243 BRT] 00000f75 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:06:28:064 BRT] 00000f75 SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:06:28:065 BRT] 00000f75 SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:06:28:066 BRT] 00000f75 SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:06:28:067 BRT] 00000f75 SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:06:28:068 BRT] 00000f75 SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:06:28:068 BRT] 00000f75 SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:07:04:435 BRT] 00000f87 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:07:05:396 BRT] 00000f87 SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:07:05:400 BRT] 00000f87 SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:07:05:401 BRT] 00000f87 SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:07:05:402 BRT] 00000f87 SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:07:05:403 BRT] 00000f87 SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:07:05:404 BRT] 00000f87 SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:09:11:344 BRT] 00000fd3 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "1" } } }
+[28/02/19 12:09:12:314 BRT] 00000fd3 SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:09:12:315 BRT] 00000fd3 SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:09:12:317 BRT] 00000fd3 SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:09:12:318 BRT] 00000fd3 SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:09:12:318 BRT] 00000fd3 SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:09:12:319 BRT] 00000fd3 SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:12:48:456 BRT] 00001016 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:12:49:546 BRT] 00001016 SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:12:49:548 BRT] 00001016 SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:12:49:549 BRT] 00001016 SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:12:49:550 BRT] 00001016 SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:12:49:552 BRT] 00001016 SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:12:49:552 BRT] 00001016 SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:13:16:781 BRT] 0000105f SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:13:17:287 BRT] 0000105f SystemOut                                                    O Issue0 = Suporte a Homologação-Luiz Galeoti-2019-01-31T16:22:12.180Z-null-false
+[28/02/19 12:13:17:287 BRT] 0000105f SystemOut                                                    O Issue1 = Criação de protótipo Content Navigator-Luiz Galeoti-2019-01-31T16:28:37.368Z-null-false
+[28/02/19 12:13:17:289 BRT] 0000105f SystemOut                                                    O Issue2 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-24T17:10:09.877Z-null-false
+[28/02/19 12:13:17:291 BRT] 0000105f SystemOut                                                    O Issue3 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-31T16:20:20.521Z-null-false
+[28/02/19 12:13:17:292 BRT] 0000105f SystemOut                                                    O Issue4 = Alterações solicitadas pela usuária durante a fase de homologação-Luiz Galeoti-2019-01-24T17:20:46.392Z-null-false
+[28/02/19 12:13:17:292 BRT] 0000105f SystemOut                                                    O Issue5 = WACR - Correção da rotina de recuperação de instancias-Luiz Galeoti-2019-01-30T11:32:35.422Z-null-false
+[28/02/19 12:13:30:787 BRT] 0000105f SystemOut                                                    O query = { "selector": { "assignee.name": "Veridiana Morassi","updated_at": { "$regex": "2" } } }
+[28/02/19 12:13:31:630 BRT] 0000105f SystemOut                                                    O Issue0 = Atualização serviço envio documento filenet-Veridiana Morassi-2019-01-21T13:24:23.186Z-2h-false
+[28/02/19 12:13:31:631 BRT] 0000105f SystemOut                                                    O Issue1 = Atualização serviço envio documento filenet-Veridiana Morassi-2019-01-21T13:24:23.186Z-2h-false
+[28/02/19 12:13:31:632 BRT] 0000105f SystemOut                                                    O Issue2 = Atualização toolkit envio de e-mail para BPMS Notificacao-Veridiana Morassi-2019-01-25T17:52:07.277Z-2h-false
+[28/02/19 12:15:30:505 BRT] 000010aa com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 12:15:30:507 BRT] 000010aa com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Destroy successful.
+[28/02/19 12:15:30:535 BRT] 000010aa com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application VinicJavaCloudant has stopped successfully.
+[28/02/19 12:15:30:548 BRT] 000010aa com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application VinicJavaCloudant.
+[28/02/19 12:15:30:602 BRT] 000010b3 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 12:15:31:007 BRT] 000010aa com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Cloudant DB Web Starter.
+[28/02/19 12:15:31:009 BRT] 000010aa com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Cloudant DB Web Starter has been bound to default_host.
+[28/02/19 12:15:31:009 BRT] 000010aa com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 12:15:31:044 BRT] 000010aa com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application VinicJavaCloudant updated in 0,496 seconds.
+[28/02/19 12:15:31:090 BRT] 000010b1 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/JavaCloudantApp
+[28/02/19 12:15:31:091 BRT] 000010b1 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[28/02/19 12:15:31:097 BRT] 000010b9 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 12:15:31:246 BRT] 000010b1 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] I Setting the server's publish address to be /api/
+[28/02/19 12:15:31:255 BRT] 000010b1 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Initialization successful.
+[28/02/19 12:15:35:417 BRT] 000010bd com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 12:15:35:421 BRT] 000010bd com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Destroy successful.
+[28/02/19 12:15:35:436 BRT] 000010bd com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application VinicJavaCloudant has stopped successfully.
+[28/02/19 12:15:35:442 BRT] 000010bd com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application VinicJavaCloudant.
+[28/02/19 12:15:35:493 BRT] 000010aa com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 12:15:35:860 BRT] 000010bd com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Cloudant DB Web Starter.
+[28/02/19 12:15:35:861 BRT] 000010bd com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Cloudant DB Web Starter has been bound to default_host.
+[28/02/19 12:15:35:861 BRT] 000010bd com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://192.168.0.18:9080/JavaCloudantApp/
+[28/02/19 12:15:35:862 BRT] 000010bd com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application VinicJavaCloudant updated in 0,420 seconds.
+[28/02/19 12:15:35:890 BRT] 000010c0 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/JavaCloudantApp
+[28/02/19 12:15:35:891 BRT] 000010c0 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[28/02/19 12:15:35:895 BRT] 000010c1 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /home/vinic/Documents/Development/bluemix/workspace/VinicJavaCloudant/target/liberty/wlp2/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[28/02/19 12:15:35:959 BRT] 000010c0 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] I Setting the server's publish address to be /api/
+[28/02/19 12:15:35:967 BRT] 000010c0 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [VinicJavaCloudant] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Initialization successful.
+[28/02/19 12:15:39:992 BRT] 000010c7 SystemOut                                                    O VCAP_SERVICES env var doesn't exist: running locally.
+[28/02/19 12:15:39:998 BRT] 000010c7 SystemOut                                                    O Connecting to Cloudant : 565beb36-f62a-46c8-bb8d-b86f437473fc-bluemix
+[28/02/19 12:15:41:364 BRT] 000010c7 SystemOut                                                    O query = { "selector": { "assignee.name": "Veridiana Morassi","updated_at": { "$regex": "2" } } }
+[28/02/19 12:15:41:566 BRT] 000010c7 SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:15:41:568 BRT] 000010c7 SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:15:41:569 BRT] 000010c7 SystemOut                                                    O {"id":"706921","name":"Veridiana Morassi","value":"Atualização toolkit envio de e-mail para BPMS Notificacao","role":"2019-01-25T17:52:07.277Z","band":""}
+[28/02/19 12:17:52:076 BRT] 000010f8 SystemOut                                                    O query = { "selector": { "assignee.name": "Veridiana Morassi","updated_at": { "$regex": "2" } } }
+[28/02/19 12:17:53:027 BRT] 000010f8 SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:17:53:028 BRT] 000010f8 SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:17:53:028 BRT] 000010f8 SystemOut                                                    O {"id":"706921","name":"Veridiana Morassi","value":"Atualização toolkit envio de e-mail para BPMS Notificacao","role":"2019-01-25T17:52:07.277Z","band":""}
+[28/02/19 12:18:10:822 BRT] 00001123 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:18:11:358 BRT] 00001123 SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:18:11:359 BRT] 00001123 SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:18:11:360 BRT] 00001123 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:18:11:361 BRT] 00001123 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:18:11:362 BRT] 00001123 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:18:11:363 BRT] 00001123 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:18:36:035 BRT] 00001127 SystemOut                                                    O query = { "selector": { "assignee.name": "Luicas Alves da Silva","updated_at": { "$regex": "2" } } }
+[28/02/19 12:18:44:893 BRT] 00001143 SystemOut                                                    O query = { "selector": { "assignee.name": "Lucas Alves da Silva","updated_at": { "$regex": "2" } } }
+[28/02/19 12:18:45:408 BRT] 00001143 SystemOut                                                    O {"id":"706700","name":"Lucas Alves da Silva","value":"Alterações no processo","role":"2019-01-24T16:05:34.132Z","band":"Doing"}
+[28/02/19 12:18:45:409 BRT] 00001143 SystemOut                                                    O {"id":"706700","name":"Lucas Alves da Silva","value":"Alterações no processo","role":"2019-01-24T16:05:34.132Z","band":"Doing"}
+[28/02/19 12:25:06:722 BRT] 0000121d SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:25:07:828 BRT] 0000121d SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:25:07:829 BRT] 0000121d SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:25:07:830 BRT] 0000121d SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:25:07:831 BRT] 0000121d SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:25:07:831 BRT] 0000121d SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:25:07:832 BRT] 0000121d SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:25:36:535 BRT] 00001230 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:25:37:057 BRT] 00001230 SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:25:37:058 BRT] 00001230 SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:25:37:058 BRT] 00001230 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:25:37:059 BRT] 00001230 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:25:37:059 BRT] 00001230 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:25:37:060 BRT] 00001230 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:27:22:939 BRT] 0000126a SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:27:24:043 BRT] 0000126a SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:27:24:044 BRT] 0000126a SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:27:24:045 BRT] 0000126a SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:27:24:046 BRT] 0000126a SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:27:24:048 BRT] 0000126a SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:27:24:051 BRT] 0000126a SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:28:28:255 BRT] 0000129b SystemOut                                                    O query = { "selector": { "assignee.name": "","updated_at": { "$regex": "2" } } }
+[28/02/19 12:28:34:951 BRT] 000012a2 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:28:35:474 BRT] 000012a2 SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:28:35:476 BRT] 000012a2 SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:28:35:476 BRT] 000012a2 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:28:35:477 BRT] 000012a2 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:28:35:477 BRT] 000012a2 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:28:35:477 BRT] 000012a2 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:28:40:402 BRT] 0000129f SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz 2Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:28:41:884 BRT] 00001299 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] W Application {http://nosql.example/}ResourceServletVinic has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: 404 Object Not Found: not_found: missing
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:162)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:128)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:191)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:309)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:271)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPut(IBMRestServlet.java:136)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1255)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:743)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1221)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1005)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:923)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1047)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:417)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:376)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:532)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:466)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:331)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:501)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:571)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:926)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1015)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.cloudant.client.org.lightcouch.NoDocumentException: 404 Object Not Found: not_found: missing
+	at com.cloudant.client.org.lightcouch.CouchDbClient.execute(CouchDbClient.java:511)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.executeToInputStream(CouchDbClient.java:574)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.get(CouchDbClient.java:330)
+	at com.cloudant.client.org.lightcouch.CouchDatabaseBase.find(CouchDatabaseBase.java:85)
+	at com.cloudant.client.api.Database.find(Database.java:527)
+	at example.nosql.ResourceServletVinic.update(ResourceServletVinic.java:290)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:652)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:96)
+	... 37 more
+
+[28/02/19 12:28:41:893 BRT] 00001299 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] W Exception in handleFault on interceptor org.apache.cxf.jaxrs.interceptor.JAXRSDefaultFaultOutInterceptor@64d645ec
+org.apache.cxf.interceptor.Fault: 404 Object Not Found: not_found: missing
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:162)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:128)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:191)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:309)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:271)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPut(IBMRestServlet.java:136)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1255)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:743)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1221)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1005)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:923)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1047)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:417)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:376)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:532)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:466)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:331)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:501)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:571)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:926)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1015)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.cloudant.client.org.lightcouch.NoDocumentException: 404 Object Not Found: not_found: missing
+	at com.cloudant.client.org.lightcouch.CouchDbClient.execute(CouchDbClient.java:511)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.executeToInputStream(CouchDbClient.java:574)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.get(CouchDbClient.java:330)
+	at com.cloudant.client.org.lightcouch.CouchDatabaseBase.find(CouchDatabaseBase.java:85)
+	at com.cloudant.client.api.Database.find(Database.java:527)
+	at example.nosql.ResourceServletVinic.update(ResourceServletVinic.java:290)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:652)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:96)
+	... 37 more
+
+[28/02/19 12:28:41:899 BRT] 00001299 .ibm.ws.jaxrs.2.0.common:1.0.24.cl190120190124-2339(id=190)] E An unexpected error occurred during error handling. No further error processing will occur.
+org.apache.cxf.interceptor.Fault: 404 Object Not Found: not_found: missing
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:162)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:128)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:191)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:309)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:271)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPut(IBMRestServlet.java:136)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1255)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:743)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1221)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1005)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:923)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1047)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:417)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:376)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:532)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:466)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:331)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:501)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:571)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:926)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1015)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.cloudant.client.org.lightcouch.NoDocumentException: 404 Object Not Found: not_found: missing
+	at com.cloudant.client.org.lightcouch.CouchDbClient.execute(CouchDbClient.java:511)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.executeToInputStream(CouchDbClient.java:574)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.get(CouchDbClient.java:330)
+	at com.cloudant.client.org.lightcouch.CouchDatabaseBase.find(CouchDatabaseBase.java:85)
+	at com.cloudant.client.api.Database.find(Database.java:527)
+	at example.nosql.ResourceServletVinic.update(ResourceServletVinic.java:290)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:652)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:96)
+	... 37 more
+
+[28/02/19 12:28:41:959 BRT] 00001299 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'com.cloudant.client.org.lightcouch.CouchDbClient.execute:511'
+com.cloudant.client.org.lightcouch.NoDocumentException: 404 Object Not Found: not_found: missing
+	at com.cloudant.client.org.lightcouch.CouchDbClient.execute(CouchDbClient.java:511)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.executeToInputStream(CouchDbClient.java:574)
+	at com.cloudant.client.org.lightcouch.CouchDbClient.get(CouchDbClient.java:330)
+	at com.cloudant.client.org.lightcouch.CouchDatabaseBase.find(CouchDatabaseBase.java:85)
+	at com.cloudant.client.api.Database.find(Database.java:527)
+	at example.nosql.ResourceServletVinic.update(ResourceServletVinic.java:290)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:652)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:96)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:191)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:309)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:271)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPut(IBMRestServlet.java:136)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1255)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:743)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1221)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1005)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:923)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1047)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:417)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:376)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:532)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:466)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:331)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:501)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:571)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:926)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1015)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+
+[28/02/19 12:28:42:116 BRT] 00001299 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.cloudant.client.org.lightcouch.NoDocumentException: 404 Object Not Found: not_found: missing com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1105" at ffdc_19.02.28_12.28.41.0.log
+[28/02/19 12:29:15:724 BRT] 000012b3 SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:29:16:523 BRT] 000012b3 SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:29:16:524 BRT] 000012b3 SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:29:16:525 BRT] 000012b3 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:29:16:526 BRT] 000012b3 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:29:16:527 BRT] 000012b3 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:29:16:527 BRT] 000012b3 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:29:20:219 BRT] 000012ad SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti2","updated_at": { "$regex": "2" } } }
+[28/02/19 12:30:32:424 BRT] 000012aa SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti","updated_at": { "$regex": "2" } } }
+[28/02/19 12:30:33:351 BRT] 000012aa SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:30:33:352 BRT] 000012aa SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:30:33:353 BRT] 000012aa SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:30:33:353 BRT] 000012aa SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:30:33:354 BRT] 000012aa SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:30:33:354 BRT] 000012aa SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:30:36:322 BRT] 000012cb SystemOut                                                    O query = { "selector": { "assignee.name": "Luiz Galeoti3","updated_at": { "$regex": "2" } } }
+[28/02/19 12:37:24:900 BRT] 000013e1 SystemOut                                                    O query = { "selector": {  "updated_at": { "$regex": "2" } } }
+[28/02/19 12:37:26:197 BRT] 000013e1 SystemOut                                                    O Exception thrown : null
+[28/02/19 12:39:07:732 BRT] 00001424 SystemOut                                                    O query = { "selector": {  "updated_at": { "$regex": "2019" } } }
+[28/02/19 12:39:08:829 BRT] 00001424 SystemOut                                                    O Exception thrown : null
+[28/02/19 12:39:45:684 BRT] 00001436 SystemOut                                                    O query = { "selector": {  "assignee.name": "Luiz Galeoti",  "updated_at": { "$regex": "2019" } } }
+[28/02/19 12:39:46:476 BRT] 00001436 SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:39:46:478 BRT] 00001436 SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:39:46:480 BRT] 00001436 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:39:46:480 BRT] 00001436 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:39:46:481 BRT] 00001436 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:39:46:482 BRT] 00001436 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:43:26:755 BRT] 000014de SystemOut                                                    O query = { "selector": {  "assignee.name": "a",  "updated_at": { "$regex": "2019" } } }
+[28/02/19 12:44:26:664 BRT] 00001502 SystemOut                                                    O query = { "selector": {  "assignee.name": { "$regex": "a" },  "updated_at": { "$regex": "2" } } }
+[28/02/19 12:44:27:640 BRT] 00001502 SystemOut                                                    O {"id":"708770","name":"Felipe Chagas Bezerra","value":"Elaborar Material de Concepção","role":"2019-02-26T14:38:59.995Z","band":"Discussion"}
+[28/02/19 12:44:27:641 BRT] 00001502 SystemOut                                                    O {"id":"711201","name":"Felipe Chagas Bezerra","value":"Elaborar Material de Concepção","role":"2019-02-26T14:38:44.899Z","band":"Doing"}
+[28/02/19 12:44:27:641 BRT] 00001502 SystemOut                                                    O {"id":"706700","name":"Lucas Alves da Silva","value":"Alterações no processo","role":"2019-01-24T16:05:34.132Z","band":"Doing"}
+[28/02/19 12:44:27:642 BRT] 00001502 SystemOut                                                    O {"id":"706700","name":"Lucas Alves da Silva","value":"Alterações no processo","role":"2019-01-24T16:05:34.132Z","band":"Doing"}
+[28/02/19 12:44:27:642 BRT] 00001502 SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:44:27:643 BRT] 00001502 SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:44:27:644 BRT] 00001502 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:44:27:645 BRT] 00001502 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:44:27:645 BRT] 00001502 SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:44:27:646 BRT] 00001502 SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:44:27:646 BRT] 00001502 SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:44:27:647 BRT] 00001502 SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:44:27:647 BRT] 00001502 SystemOut                                                    O {"id":"706921","name":"Veridiana Morassi","value":"Atualização toolkit envio de e-mail para BPMS Notificacao","role":"2019-01-25T17:52:07.277Z","band":""}
+[28/02/19 12:44:27:648 BRT] 00001502 SystemOut                                                    O {"id":"707381","name":"Vitor Siqueira Olivo","value":"Alterar segmentação para conter apenas \"CORPORATE\", \"COPORATE ONE\" e \"LARGE CORPORATE\"","role":"2019-02-13T13:36:06.955Z","band":""}
+[28/02/19 12:44:50:476 BRT] 0000151e SystemOut                                                    O query = { "selector": {  "assignee.name": { "$regex": " " },  "updated_at": { "$regex": "2" } } }
+[28/02/19 12:44:51:166 BRT] 0000151e SystemOut                                                    O {"id":"708770","name":"Felipe Chagas Bezerra","value":"Elaborar Material de Concepção","role":"2019-02-26T14:38:59.995Z","band":"Discussion"}
+[28/02/19 12:44:51:167 BRT] 0000151e SystemOut                                                    O {"id":"711201","name":"Felipe Chagas Bezerra","value":"Elaborar Material de Concepção","role":"2019-02-26T14:38:44.899Z","band":"Doing"}
+[28/02/19 12:44:51:168 BRT] 0000151e SystemOut                                                    O {"id":"706700","name":"Lucas Alves da Silva","value":"Alterações no processo","role":"2019-01-24T16:05:34.132Z","band":"Doing"}
+[28/02/19 12:44:51:168 BRT] 0000151e SystemOut                                                    O {"id":"706700","name":"Lucas Alves da Silva","value":"Alterações no processo","role":"2019-01-24T16:05:34.132Z","band":"Doing"}
+[28/02/19 12:44:51:171 BRT] 0000151e SystemOut                                                    O {"id":"707564","name":"Luiz Galeoti","value":"Suporte a Homologação","role":"2019-01-31T16:22:12.180Z","band":"Doing"}
+[28/02/19 12:44:51:172 BRT] 0000151e SystemOut                                                    O {"id":"707565","name":"Luiz Galeoti","value":"Criação de protótipo Content Navigator","role":"2019-01-31T16:28:37.368Z","band":"Doing"}
+[28/02/19 12:44:51:172 BRT] 0000151e SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-24T17:10:09.877Z","band":"Doing"}
+[28/02/19 12:44:51:174 BRT] 0000151e SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-31T16:20:20.521Z","band":""}
+[28/02/19 12:44:51:176 BRT] 0000151e SystemOut                                                    O {"id":"706093","name":"Luiz Galeoti","value":"Alterações solicitadas pela usuária durante a fase de homologação","role":"2019-01-24T17:20:46.392Z","band":"Doing"}
+[28/02/19 12:44:51:176 BRT] 0000151e SystemOut                                                    O {"id":"706756","name":"Luiz Galeoti","value":"WACR - Correção da rotina de recuperação de instancias","role":"2019-01-30T11:32:35.422Z","band":""}
+[28/02/19 12:44:51:177 BRT] 0000151e SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:44:51:178 BRT] 0000151e SystemOut                                                    O {"id":"706091","name":"Veridiana Morassi","value":"Atualização serviço envio documento filenet","role":"2019-01-21T13:24:23.186Z","band":""}
+[28/02/19 12:44:51:178 BRT] 0000151e SystemOut                                                    O {"id":"706921","name":"Veridiana Morassi","value":"Atualização toolkit envio de e-mail para BPMS Notificacao","role":"2019-01-25T17:52:07.277Z","band":""}
+[28/02/19 12:44:51:180 BRT] 0000151e SystemOut                                                    O {"id":"707381","name":"Vitor Siqueira Olivo","value":"Alterar segmentação para conter apenas \"CORPORATE\", \"COPORATE ONE\" e \"LARGE CORPORATE\"","role":"2019-02-13T13:36:06.955Z","band":""}

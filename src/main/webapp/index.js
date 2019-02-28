@@ -124,6 +124,7 @@ function sanitizeInput(str) {
 }
 function setRowContent(item, row) {
 	var innerHTML = "<td class='contentName'><textarea id='nameText' class = 'nameText' onkeydown='onKey(event)'>" + sanitizeInput(item.name) + "</textarea></td>" +
+					"<td class='contentName'><textarea id='valueText' class = 'nameText' onkeydown='onKey(event)'>" + sanitizeInput(item.value) + "</textarea></td>" +
 					"<td class='contentName'><textarea id='roleText' class = 'nameText' onkeydown='onKey(event)'>" + sanitizeInput(item.role) + "</textarea></td>" +
 					"<td class='contentName'><textarea id='bandText' class = 'nameText' onkeydown='onKey(event)'>" + sanitizeInput(item.band) + "</textarea></td>";
 					/*** "<td class='contentDetails'>"; ***/
@@ -179,17 +180,22 @@ function addItem(item, isNew) {
 	if (item) // if not a new row
 	{
 		setRowContent(item, row);
-	} else //if new row
+	} else if (item) //if new row with content
 	{
 		row.innerHTML = "<td class='contentName'><textarea id='nameText' onkeydown='onKey(event)' placeholder=\"Enter the name...\"></textarea></td>" +
 					    "<td class='contentName'><textarea id='roleText' onkeydown='onKey(event)' placeholder=\"Enter the role...\"></textarea></td>" +
 					    "<td class='contentName'><textarea id='bandText' onkeydown='onKey(event)' placeholder=\"Enter the band...\"></textarea></td>" +
-					    /*** "<td class='contentDetails'><textarea id='valText'  onkeydown='onKey(event)' placeholder=\"Enter a description...\"></textarea>" + attachButton + "</td>" + ***/
 				        "<td class = 'contentAction'><span class='deleteBtn' onclick='deleteItem(this)' title='delete me'></span></td>";
 	}
 
+	
 	var table = document.getElementById('notes');
-	table.lastChild.appendChild(row);
+	
+	
+	
+	
+	//table.lastChild.appendChild(row);
+	table.append(row);
 	row.isNew = !item || isNew;
 
 	if (row.isNew) {
@@ -313,16 +319,23 @@ function saveChange(contentNode, callback){
 
 function executeSearchByAssignee(){
 	
-	showLoadingMessage();	
-	var query = '{ "selector": { "assignee.name": "' + document.getElementById("assigneeName").value + '","updated_at": { "$regex": "' + document.getElementById("createdAt").value + '" } } }';	
+	showLoadingMessage();
+	var assigneeName = document.getElementById("assigneeName").value;
+	var createdAt = document.getElementById("createdAt").value;
+	
+	// Create query to be executed
+	var query = '{ "selector": { ';
+	if(assigneeName){ 
+		//query += ' "assignee.name": "' + assigneeName + '", ';
+		query += ' "assignee.name": { "$regex": "' + assigneeName + '" }, ';
+	}
+	query += ' "updated_at": { "$regex": "' + createdAt + '" } } }';
+
 	xhrGet(REST_DATA + "?query=" + query, function(data){
-
-		//stop showing loading message
-		stopLoadingMessage();
-
 		var receivedItems = data.body || [];
 		var items = [];
 		var i;
+		
 		// Make sure the received items have correct format
 		for(i = 0; i < receivedItems.length; ++i){
 			var item = receivedItems[i];
@@ -330,26 +343,18 @@ function executeSearchByAssignee(){
 				items.push(item);
 			}
 		}
-		var hasItems = items.length;
-		if(!hasItems){
-			items = defaultItems;
-		}
-		for(i = 0; i < items.length; ++i){
-			addItem(items[i], !hasItems);
-		}
-		if(!hasItems){
-			var table = document.getElementById('notes');
-			var nodes = [];
-			for(i = 0; i < table.rows.length; ++i){
-				nodes.push(table.rows[i].firstChild.firstChild);
+		var hasItems = (items.length && items[0].name != null && items[0].name != "");
+		
+		// If has items, update table		
+		if(hasItems){
+			for(i = 0; i < items.length; ++i){
+				addItem(items[i], !hasItems);
 			}
-			function save(){
-				if(nodes.length){
-					saveChange(nodes.shift(), save);
-				}
-			}
-			save();
+		// If has no items, show message
+		} else {
+			alert("Not found");
 		}
+			
 	}, function(err){
 		console.log(err);
 		document.getElementById('errorDiv').innerHTML = err;
@@ -364,16 +369,12 @@ function toggleAppInfo(){
 	node.style.display = node.style.display == 'none' ? '' : 'none';
 }
 
-
 function showLoadingMessage()
 {
 	document.getElementById('loadingImage').innerHTML = "Loading data "+"<img height=\"100\" width=\"100\" src=\"images/loading.gif\"></img>";
 }
+
 function stopLoadingMessage()
 {
 	document.getElementById('loadingImage').innerHTML = "";
 }
-
-//showLoadingMessage();	
-//loadItems();
-
