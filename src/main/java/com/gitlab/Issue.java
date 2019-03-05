@@ -5,8 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Issue implements List<Issue> {
+public class Issue /* implements List<Issue>  */ {
 
+	public Integer status_at;
 	public String _id;
 	public String _rev;
 	public Integer id;
@@ -28,11 +29,17 @@ public class Issue implements List<Issue> {
 	public String web_url;
 
 	public String[] labels;
-	public Assignee assignee;
+	
 	public Milestone milestone;
+	public Assignee assignee;
 	public TimeStats time_stats;
+	
+	//New fields
+	public Assignee closed_by;
+	public Author author;
+	public Assignee[] assignees;
 
-
+/*
 	public Issue() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -419,4 +426,18 @@ public class Issue implements List<Issue> {
 		return null;
 	}
 
+
+
+	private static Issue[] InitializeIssues (Integer issueCount) {
+
+		Issue[] issues = new Issue[issueCount + 1];
+
+		for(int i = 0; i < issues.length; i++)
+		{
+			issues[i] = new Issue();
+		}
+		return issues;
+	}
+	
+*/
 }

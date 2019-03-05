@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -27,6 +29,7 @@ import com.cloudant.client.api.Database;
 import com.cloudant.client.api.Search;
 import com.cloudant.client.api.views.Key;
 import com.gitlab.Issue;
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.internal.LinkedTreeMap;
@@ -40,6 +43,7 @@ public class ResourceServletVinic {
 	public ResourceServletVinic() {
 	}
 
+	/***
 	@POST
 	public Response create(@QueryParam("id") String id, @FormParam("name") String name, @FormParam("role") String role, @FormParam("band") String band)
 			throws Exception {
@@ -60,6 +64,30 @@ public class ResourceServletVinic {
 		return Response.ok(resultObject.toString()).build();
 
 	}
+	****/
+	@POST
+	public Response create(@QueryParam("jsonData") String jsonData)
+			throws Exception {
+
+		Database db = null;
+		try {
+			db = getDB();
+		} catch (Exception re) {
+			re.printStackTrace();
+			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+		}
+		
+		JsonObject jsonObject = new JsonObject();
+		Gson gson = new Gson();
+		jsonObject = gson.fromJson(jsonData, JsonObject.class);
+		
+		com.cloudant.client.api.model.Response responseObj = db.save(jsonObject);
+		//System.out.println("Create Successful.");
+	
+		return Response.ok(responseObj.toString()).build();
+
+	}
+
 
 	protected JsonObject create(Database db, String id, String name, String role, String band, Part part, String fileName)
 			throws IOException {
