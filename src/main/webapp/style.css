@@ -4,7 +4,7 @@
 
 body,html {
 	background-color: #f5f7fa;
-	width: 100%;
+	width: 1280px;
 	height: 100%;
 	margin: 0 auto;
 	font-family: Lato,sans-serif;
@@ -18,7 +18,7 @@ header, footer {
 }
 
 .container {
-	height: 100%;
+	height: 1280px;
 	overflow: auto;
 	display: flex;
 	flex-direction: column;
@@ -35,18 +35,22 @@ header {
 	padding-top: 20px;
 	font-size: 1.3em;
 }
+
 footer {
 	padding: 10px;
 	font-size: .8rem;
 }
+
 .title, .tips {
 	height: 30px;
 	padding-top: 20px;
 	position: relative;
 }
+
 .title {
 	border-radius: 40px 40px 0 0;
 }
+
 .tips {
 	border-radius: 0 0 40px 40px;
 }
@@ -58,11 +62,13 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 }
+
 .content {
 	font-size: .8rem;
 	width: 30%;
 	vertical-align: top;
 }
+
 .contentName {
 	padding: 10px;
 	padding-left: 20px;
@@ -70,9 +76,11 @@ table {
 	font-weight:bold;
 	vertical-align: top;
 }
+
 .contentDetails {
 	padding: 10px;
 }
+
 .contentAction {
 	width: 10%;
 	padding-right: 20px;
@@ -82,6 +90,7 @@ table {
 .nameText {
 	font-weight: bold;
 }
+
 .records textarea {
 	height: 1.2em;
 	font-size: 1em;
@@ -102,11 +111,13 @@ table {
 	border: none;
 	cursor: pointer;
 }
+
 .addBtn {
   background: none;
   border: none;
   cursor: pointer;
 }
+
 .detailBtn img{
 	width: 20px;
 	height: 20px;
@@ -120,16 +131,12 @@ table {
 }
 
 tr:hover .deleteBtn {
-
 	cursor: pointer;
 }
-
 
 .tableRows{
 	border: 2px solid #DFE3E6
 }
-
-
 
 .fieldname {
 	text-align: right;
@@ -138,8 +145,9 @@ tr:hover .deleteBtn {
 
 .errorMsg {
 	color: red;
-	font-weight:normal;
+	font-weight: normal;
 }
+
 .newappIcon {
   display: block;
   max-width: 100px;
@@ -164,55 +172,221 @@ tr:hover .deleteBtn {
 .infoImg {
 	cursor: pointer;
 }
+
 .flexBox {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .contentTiles {
 		padding: 10px;
 		font-size: .8rem;
 }
+
 .uploadBox {
   margin: 0 auto;
   text-align: center;
 }
+
 .appinfo {
 	padding: 10px;
 }
 
-/***** Botoes ******/
-.button {        
-    display: inline-block;
+/*** Alteracoes Lucas ***/
+
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+@font-face {
+      font-family: "ibm";
+      src: url("IBMPlexSans-Text.ttf") format("truetype");
+}
+
+.ibm-title{
+    font-family: "ibm";
+	padding: 15px;
+  	margin: 0 auto;
+  	text-align: center;
+	font-size: 1.5rem;
+}
+
+.ibm-font{
+	font-family: "ibm";
+	transition: text-shadow .3s;
+}
+
+.ibm-font:hover{
+	text-shadow: 0 0 13px rgba(100,100,100, 0.9);
+}
+
+big {
+	font-size: 80px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+label {
+	display: block;
+	float: center;
+	border: transparent;
+}
+
+label, input {
+	width: 50%;
+	margin: 1px;
+}
+
+input {
+	width:100px;
+}
+
+fieldset {
+	text-align: center;
+	border: transparent;
+	width:200px;
+
+}
+
+.button {
+	display: inline-block;
     white-space: nowrap;
-    background-color: #ccc;
+    background-color: #4169E1;
     background-image: linear-gradient(top, #eee, #ccc);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
     border: 1px solid #777;
     padding: 0 1.5em;
     margin: 0.5em;
-    font:  1em/1.5em Arial, Helvetica;
+    font:  1em/1.5em ibm;
     text-decoration: none;
-    color: #333;
-    text-shadow: 0 1px 0 rgba(255,255,255,.8);
-    border-radius: .2em;
-    box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    color: white;
+    text-shadow: none;
+	opacity: 0.8;
+	cursor: pointer;
+	padding: 8px 16px;
+	border-radius: 15px;
+	font-size: 16px;
 }
 
+/* Ripple magic */
+.button{
+  position: relative;
+  overflow: hidden;
+}
+
+.button:after {
+  content: '';
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 35%;
+  left: 41%;
+  width: 16px;
+  height: 16px;
+  background: rgba(51, 102, 204, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform-origin: 50% 50%;
+  
+}
+
+@keyframes ripple {
+  0%, 35% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+
+.button::after {
+  animation: ripple 1.2s ease-out infinite;
+  animation-delay: 1s;
+}
+
+/*** Alteracoes Lucas ***/
+
+
+
+/***** Botoes Vini ******/
+/** .button {        
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #4169E1;
+    background-image: linear-gradient(top, #eee, #ccc);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+    border: 1px solid #777;
+    padding: 0 1.5em;
+    margin: 0.5em;
+    font:  1em/1.5em ibm;
+    text-decoration: none;
+    color: white;
+	padding: 8px 16px;
+    text-shadow: none;
+    border-radius: .2em;
+	opacity: 0.8;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+	overflow: hidden;
+}
+
+.button:after {
+	content: '';
+	mix-blend-mode: screen;
+	position: absolute;
+	top: 41% /**21px ;
+	left: 47% /**632px;
+	height: 16px;
+	background: rgba(51, 102, 204, .5);
+	opacity: 0;
+	border-radius: 100%;
+	transform-origin: 50% 50%;
+animation: ripple 1.2s ease-out infinite;
+  animation-delay: 1s;
+}
+
+**/
 .button:hover {
-    background-color: #ddd;        
-    background-image: linear-gradient(top, #fafafa, #ddd);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');        
+	background-color: #284CB7;        
+	color: white;
+	text-shadow: none;
+	box-shadow: 0 0 3px #000000;
+	position: relative;
 }
 
 .button:active {
-    box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+    box-shadow: 0 0 3px #000000;
     position: relative;
     top: 1px;
 }
 
 .button:focus {
     outline: 0;
-    background: #fafafa;
+    background: #284CB7;
 }    
 
 .button:before {
@@ -226,7 +400,7 @@ tr:hover .deleteBtn {
     padding: 0 .2em;
     box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
     border-radius: .15em 0 0 .15em;
-    pointer-events: none;        
+    pointer-events: none;
 }
 
 /* Hexadecimal entities for the icons */
@@ -270,4 +444,4 @@ tr:hover .deleteBtn {
 .play:before {
     content: "\25B6";
 }
-/***** Botoes ******/
+/***** Botoes Vini ******/

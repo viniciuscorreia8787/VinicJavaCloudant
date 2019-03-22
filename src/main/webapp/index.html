@@ -7,58 +7,100 @@
 		content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	
-	<!-- Google Charts -->
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-	    // Load the Visualization API and the corechart package.
-	    google.charts.load('current', {'packages':['corechart']});
-	    // Set a callback to run when the Google Visualization API is loaded.
-	    google.charts.setOnLoadCallback(drawChart);
-	    function drawChart(){}
-	</script>
- 	<!-- Google Charts End -->	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+	
+  
+    
+    function setVis(){
+    	  $("#ui-datepicker-div").hide();
+    	  $("#msg").hide();
+    	  $("#loadingImage").hide();
+    	  $("#loader").hide();
+    }
+    
+    $(document).ready(function (){
+        $(".datepicker").datepicker();
+        $("#ui-datepicker-div").show();
+        $('#assigneeName').css({'border-width': 'thin'});
+        $('#endDate').css({'border-width': 'thin'});
+        $('#startDate').css({'border-width': 'thin'});
+        $('#assigneeName').css({'border-color': 'grey'});
+        $('#endDate').css({'border-color': 'grey'});
+        $('#startDate').css({'border-color': 'grey'});
+        var dateFormat = "mm/dd/yy",
+        from = $( "#startDate" )
+        .datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 3
+        })
+        .on( "change", function() {
+        	to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#endDate" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 3
+      })
+      .on( "change", function() {
+    	  from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+   });
+    </script>
+	<link rel="stylesheet" type="text/css" media="all"
+      href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/cupertino/jquery-ui.css"/>
+	 	
 	<script type="text/javascript" src="util.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 </head>
-<body>
-	<div class="container">
+<body style="overflow-y: hidden;overflow-x: hidden;" onload="setVis()">
 		<div class="banner">
 			<img class="newappIcon" src="images/newapp-icon.png">
-			<p class="appTitle">Dashboards Gitlab 1.2</p>
+			<p class="ibm-title"><b>Dashboards GitLab 1.2</b></p>
 		</div>
-		<div>
-			<table>
-				<tr>
-					<td width="150px">Assignee Name:</td>
-					<td><input type="Text" name="assigneeName" id="assigneeName"></td>
-				</tr>
-				<tr>
-					<td>Start Date:</td>
-					<td><input type="Text" name="startDate" id="startDate"></td>
-					<td>End Date:</td>
-					<td><input type="Text" name="endDate" id="endDate"></td>
-				</tr>
-			</table>
-			<a class="button" onclick="executeSearchByAssignee()">Search 1</a>
-		</div>
-		<table><tr><td align="center"><div id="bar_chart_div"></td><td align="center"></div><div id="pie_chart_div"></div></td></tr></table>
-		<section>
-			<table id='notes' class='records' border='0' cellspacing='0'
-				cellpadding='0'>
-				<tbody></tbody>
-			</table>
-		</section>
-		<footer>
-			<div id="loadingImage"></div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<div id="errorDiv" class='errorMsg'></div>
-		</footer>
-
+		
+	<div align="center">
+		<br>
+		<label class="ibm-font">Assignee Name: <input width="100px" type="Text" name="assigneeName" id="assigneeName" style="padding-right:15%">
+		</label>
+		<br>
+		
+	<fieldset>
+		<div align="center">
+			<label class="ibm-font">
+				Start Date: <input type="Text" name="startDate" id="startDate" class="datepicker">
+			</label>
+				
+			<label class="ibm-font">
+				End Date:	<input type="Text" name="endDate" id="endDate" class="datepicker">
+			</label>
+		</div>	
+	</fieldset>
+		
+		<a width="20%" class="button" id="btnSearch"><i class="fa fa-search"><b> Search</b></i></a>
+		<div id="msg"></div>
+		<br />
+		<br />
+		<div id="loadingImage"></div>
+		<div id="errorDiv"></div>
+		<center><div id="loader" class="loader"></div><center>
 	</div>
 </body>
 </html>

@@ -267,12 +267,64 @@ function saveChange(contentNode, callback){
 	}
 }
 
+
+$(document).ready(function(){
+	$('#btnSearch').click(function(){
+		var campo_vazio = false;
+					
+		var msg = '<div class="alert"><center><strong>Error!</strong> ';	
+
+		if($('#startDate').val() == ''){
+			$('#startDate').css({'border-color': '#B33A3A'});
+			if(campo_vazio){
+				msg += 'and ';
+			}
+			msg += '<b>Start Date</b> ';
+			campo_vazio = true;						
+		}else{
+			$('#startDate').css({'border-color': 'grey'});
+			$('#endDate').css({'border-width': 'thin'});
+		}
+		
+		if($('#endDate').val() == ''){
+			$('#endDate').css({'border-color': '#B33A3A'});
+			if(campo_vazio){
+				msg += 'and ';
+			}
+			msg += '<b>End Date</b> ';
+			campo_vazio = true;						
+		}else{
+			$('#endDate').css({'border-color': 'grey'});
+			$('#endDate').css({'border-width': 'thin'});
+		}
+
+		if(campo_vazio){
+			msg += 'are Invalid!</center></div>';
+			document.getElementById("msg").innerHTML = msg;
+			$("#msg").show();
+		}else{
+			$("#msg").hide();
+			$("#loader").show();
+			debugger;
+			executeSearchByAssignee();
+			$("#loader").hide();
+		}	
+		});
+	});
+
+function formatDate(date){	
+	var ret = date.split("/");
+	return "" + ret[2] + ret [0] + ret[1];
+}
+
 function executeSearchByAssignee(){
 	
 	showLoadingMessage();
 	var assigneeName = document.getElementById("assigneeName").value;
-	var startDate = document.getElementById("startDate").value;
-	var endDate = document.getElementById("endDate").value;
+	var startDate = formatDate(document.getElementById("startDate").value);
+	var endDate = formatDate(document.getElementById("endDate").value);
+	
+	debugger;
 	
 	// Create query to be executed
 	var query = '{ "selector": { ';
@@ -327,6 +379,7 @@ function toggleAppInfo(){
 function showLoadingMessage()
 {
 	document.getElementById('loadingImage').innerHTML = "Loading data "+"<img height=\"100\" width=\"100\" src=\"images/loading.gif\"></img>";
+	$("#loadingImage").show();
 }
 
 function stopLoadingMessage()
