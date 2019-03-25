@@ -1,0 +1,50 @@
+********************************************************************************
+product = WebSphere Application Server 19.0.0.2 (wlp-1.0.25.cl190220190222-1311)
+wlp.install.dir = C:/Users/LucasAlvesdaSilva/git/VinicJavaCloudant/target/liberty/wlp/
+java.home = C:\Program Files\Java\jdk-11.0.2
+java.version = 11.0.2
+java.runtime = Java(TM) SE Runtime Environment (11.0.2+9-LTS)
+os = Windows 10 (10.0; amd64) (pt_BR)
+process = 9684@LAPTOP-5SIHVQ0G
+********************************************************************************
+[22/03/2019 11:12:05:254 BRT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: O servidor defaultServer foi ativado.
+[22/03/2019 11:12:05:333 BRT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: Este produto é licenciado para uso de desenvolvimento e de produção limitada. Os termos de licença integrais podem ser visualizados aqui: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/19.0.0.2/lafiles/pt.html
+[22/03/2019 11:12:08:535 BRT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: O kernel foi iniciado após 8,346 segundos
+[22/03/2019 11:12:08:721 BRT] 0000001d com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Atualização do recurso iniciada.
+[22/03/2019 11:12:12:923 BRT] 00000016 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: O serviço de segurança está iniciando...
+[22/03/2019 11:12:13:447 BRT] 00000018 com.ibm.ws.ssl.config.WSKeyStore                             I CWPKI0819I: O keystore padrão não foi criado porque uma senha não está configurada no elemento <keyStore id="defaultKeyStore"/> e a variável de ambiente 'keystore_password' não está configurada. 
+[22/03/2019 11:12:13:504 BRT] 0000002a com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   I CWWKS4103I: Criando as chaves LTPA. Isso pode levar alguns segundos.
+[22/03/2019 11:12:13:511 BRT] 00000016 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I:  O plug-in de autenticação coletivo com o nome de classe NullCollectiveAuthenticationPlugin foi ativado. 
+[22/03/2019 11:12:14:066 BRT] 0000002a com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   A CWWKS4104A: Chaves LTPA criadas em 0,562 segundos. Arquivo-chave LTPA: C:/Users/LucasAlvesdaSilva/git/VinicJavaCloudant/target/liberty/wlp/usr/servers/defaultServer/resources/security/ltpa.keys
+[22/03/2019 11:12:14:074 BRT] 0000002a com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: A configuração de LTPA fica pronta após 0,605 segundos.
+[22/03/2019 11:12:14:265 BRT] 00000016 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitorando dropins para aplicativos.
+[22/03/2019 11:12:15:416 BRT] 00000020 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: O Canal TCP defaultHttpEndpoint foi iniciado e agora está atendendo solicitações no host *  (IPv6) porta 9080.
+[22/03/2019 11:12:16:130 BRT] 00000016 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: A instância de Cache Dinâmico do WebSphere denominada baseCache foi inicializada com êxito.
+[22/03/2019 11:12:16:136 BRT] 00000016 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: O provedor de cache default está sendo usado.
+[22/03/2019 11:12:16:139 BRT] 00000016 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Cache Dinâmico (cache de objeto) inicializado com êxito.
+[22/03/2019 11:12:21:860 BRT] 00000024 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Iniciando o aplicativo JavaCloudantApp.
+[22/03/2019 11:12:24:161 BRT] 00000024 org.jboss.weld.Version                                       I WELD-000900: 2.4.8 (Final)
+[22/03/2019 11:12:25:672 BRT] 00000024 com.ibm.ws.session.WASSessionCore                            I SESN8501I: O gerenciador de sessões não localizou um local de armazenamento persistente; objetos HttpSession serão armazenados na memória do servidor de aplicativos local.
+[22/03/2019 11:12:25:693 BRT] 00000024 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Carregando o Módulo da Web: Cloudant DB Web Starter.
+[22/03/2019 11:12:25:697 BRT] 00000024 com.ibm.ws.webcontainer                                      I SRVE0250I: O Módulo da Web Cloudant DB Web Starter foi ligado ao default_host.
+[22/03/2019 11:12:25:700 BRT] 00000024 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Aplicativo da Web disponível (default_host): http://laptop-5sihvq0g:9080/JavaCloudantApp/
+[22/03/2019 11:12:25:713 BRT] 00000024 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: O aplicativo JavaCloudantApp foi iniciado em 3,852 segundos.
+[22/03/2019 11:12:25:882 BRT] 0000001d com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: O servidor instalou os recursos a seguir: [jsp-2.3, ejbLite-3.2, managedBeans-1.0, servlet-3.1, jsf-2.2, beanValidation-1.1, ssl-1.0, jndi-1.0, appSecurity-2.0, jsonp-1.0, jdbc-4.1, jaxrs-2.0, el-3.0, jaxrsClient-2.0, json-1.0, jpaContainer-2.1, cdi-1.2, distributedMap-1.0, webProfile-7.0, websocket-1.1, jpa-2.1].
+[22/03/2019 11:12:25:883 BRT] 0000001d com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Atualização do recurso concluída em 17,357 segundos.
+[22/03/2019 11:12:25:883 BRT] 0000001d com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: O servidor defaultServer está pronto para executar um planeta mais inteligente.
+[22/03/2019 11:12:26:062 BRT] 00000026 com.ibm.ws.session.WASSessionCore                            I SESN0176I: Um novo contexto de sessão será criado para a chave do aplicativo default_host/JavaCloudantApp
+[22/03/2019 11:12:26:080 BRT] 00000026 com.ibm.ws.util                                              I SESN0172I: O gerenciador de sessões está usando a implementação SecureRandom padrão Java para geração do ID de sessão.
+[22/03/2019 11:12:26:322 BRT] 00000026 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Cache Dinâmico (cache de objeto) inicializado com êxito.
+[22/03/2019 11:12:26:662 BRT] 00000029 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: Um arquivo de configuração para um plug-in de servidor da web foi automaticamente gerado para este servidor em C:\Users\LucasAlvesdaSilva\git\VinicJavaCloudant\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[22/03/2019 11:12:26:801 BRT] 00000026 .ibm.ws.jaxrs.2.0.common:1.0.25.cl190220190222-1311(id=190)] I Setting the server's publish address to be /api/
+[22/03/2019 11:12:27:075 BRT] 00000026 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [JavaCloudantApp] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Inicialização bem sucedida.
+[22/03/2019 11:16:04:727 BRT] 00000014 com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Encerramento do servidor solicitado em sexta-feira, 22 de março de 2019 às 11:16. O servidor defaultServer está sendo encerrado.
+[22/03/2019 11:16:04:733 BRT] 00000036 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Aguardando até 30 segundos para o servidor ser colocado em modo quiesce.
+[22/03/2019 11:16:04:763 BRT] 0000001d com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: O Canal TCP defaultHttpEndpoint interrompeu o atendimento das solicitações no host *  (IPv6) porta 9080.
+[22/03/2019 11:16:04:766 BRT] 0000001d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Aplicativo da Web removido (default_host): http://laptop-5sihvq0g:9080/JavaCloudantApp/
+[22/03/2019 11:16:05:770 BRT] 00000036 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Colocação em modo quiesce do servidor concluída.
+[22/03/2019 11:16:05:807 BRT] 0000002d com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [JavaCloudantApp] [/JavaCloudantApp] [javax.ws.rs.core.Application]: Destruição bem sucedida.
+[22/03/2019 11:16:05:925 BRT] 0000002d com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: O aplicativo JavaCloudantApp foi interrompido com sucesso.
+[22/03/2019 11:16:06:045 BRT] 00000036 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: O serviço de segurança parou.
+[22/03/2019 11:16:06:082 BRT] 00000036 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I:  O plug-in de autenticação coletivo com o nome de classe NullCollectiveAuthenticationPlugin foi desativado. 
+[22/03/2019 11:16:06:972 BRT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: O servidor defaultServer foi interrompido depois de 4 minutos, 6,786 segundos.

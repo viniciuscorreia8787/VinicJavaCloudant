@@ -1,0 +1,13 @@
+
+arg0=--batch-file=--stop
+arg1=stop
+arg2=defaultServer
+exit=1
+
+                 Java home:  C:\Program Files\Java\jdk-11.0.2
+              Install root:  C:/Users/LucasAlvesdaSilva/git/VinicJavaCloudant/target/liberty/wlp/
+          System libraries:  C:/Users/LucasAlvesdaSilva/git/VinicJavaCloudant/target/liberty/wlp/lib/
+                 User root:  C:/Users/LucasAlvesdaSilva/git/VinicJavaCloudant/target/liberty/wlp/usr/
+                    Config:  C:/Users/LucasAlvesdaSilva/git/VinicJavaCloudant/target/liberty/wlp/usr/servers/defaultServer/
+                    Output:  C:/Users/LucasAlvesdaSilva/git/VinicJavaCloudant/target/liberty/wlp/usr/servers/defaultServer/
+

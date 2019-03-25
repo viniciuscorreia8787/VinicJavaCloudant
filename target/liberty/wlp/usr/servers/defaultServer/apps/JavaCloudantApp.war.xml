@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="C:\Users\LucasAlvesdaSilva\git\VinicJavaCloudant\WebContent" targetInArchive="/"/>
+    <dir sourceOnDisk="C:\Users\LucasAlvesdaSilva\git\VinicJavaCloudant\target\m2e-wtp\web-resources" targetInArchive="/"/>
+    <dir sourceOnDisk="C:\Users\LucasAlvesdaSilva\git\VinicJavaCloudant\src\main\webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="C:\Users\LucasAlvesdaSilva\git\VinicJavaCloudant\src" targetInArchive="/WEB-INF/classes"/>
+    <dir sourceOnDisk="C:\Users\LucasAlvesdaSilva\git\VinicJavaCloudant\target\classes" targetInArchive="/WEB-INF/classes"/>
+    <dir sourceOnDisk="C:\Users\LucasAlvesdaSilva\git\VinicJavaCloudant\target\test-classes" targetInArchive="/WEB-INF/classes"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\com\cloudant\cloudant-client\2.7.0\cloudant-client-2.7.0.jar" targetInArchive="/WEB-INF/lib/cloudant-client-2.7.0.jar"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\com\google\code\gson\gson\2.7\gson-2.7.jar" targetInArchive="/WEB-INF/lib/gson-2.7.jar"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\commons-codec\commons-codec\1.6\commons-codec-1.6.jar" targetInArchive="/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\com\cloudant\cloudant-http\2.7.0\cloudant-http-2.7.0.jar" targetInArchive="/WEB-INF/lib/cloudant-http-2.7.0.jar"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar" targetInArchive="/WEB-INF/lib/commons-io-2.4.jar"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.6\jackson-core-2.9.6.jar" targetInArchive="/WEB-INF/lib/jackson-core-2.9.6.jar"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.6\jackson-annotations-2.9.6.jar" targetInArchive="/WEB-INF/lib/jackson-annotations-2.9.6.jar"/>
+    <file sourceOnDisk="C:\Users\LucasAlvesdaSilva\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.6\jackson-databind-2.9.6.jar" targetInArchive="/WEB-INF/lib/jackson-databind-2.9.6.jar"/>
+</archive>

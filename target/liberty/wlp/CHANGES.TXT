@@ -1,0 +1,29 @@
+OLGH5094 Fix NPE in servlet cleanup for WebSocket request
+PH05787 CONCURRENTMODIFICATIONEXCEPTION
+PH05829 MANAGEDOBJECTEXCEPTION WHEN CALLING GETBEAN FOR NONCONTEXT
+PH07036 Potential vulnerability in WebSphere Application Server WebContainer
+PH07896 Liberty server start hangs on "CWWKZ0018I: Starting application" when thread pool max size is set
+PH08030 CHANGES NEEDED IN THE SAFAUTHORIZATIONSERVICE API
+PH08209 Add support for CICS 5.5 for WebSphere Optimized Local Adapters
+PH08428 NullPointerException is thrown when creating a SCIM user with missing name
+PH08466 OAuth introspect endpoint does not return correct issuer if OpenID Connect provider configures issuerIdentifier
+PH08497 MESSAGE ICH408I IS NOT GENERATED WHEN USER LACKS ACCESS TO PROFILE PREFIX IN APPL CLASS
+PH08537 Ship assembler DSECT that maps SMF 120 subtype 11 z/OS connect user data.
+PI58466 JAX-RS 2.0 exception mapper issue    
+OLGH4975 Destroy of aborted connections and removal from the pool
+OLGH5833 The federatedRepositry-->primaryRealm-->defaultParents element should support multiple occurences in the server.xml
+OLGH6017 Auto plugin generation is inconsistent with osgi applications
+OLGH6183 Incomplete SRVE0279E message
+OLGH6273 JAX-RS clearing RuntimeContext for server side message when resource invokes a client
+OLGH6287 Add default value to the remoteIp "proxies" attribute in the metatype.xml of the HTTP Channel
+OLGH6298 Update WebContainer.getCacheManager() to avoid NullPointerException 
+OLGH6323 Invalid archive files no longer prevent apps from starting
+OLGH6348 Fix 500 error when servletPath is NULL
+OLGH6371 Handle exception on call to connection.abort 
+OLGH6381 WLP 18.0.0.4 fails to rotate trace log on Windows 
+OLGH6408 Fix for connection wait timeout message not being translated.
+OLGH6427 Connection wait time does not dynamically change to 0
+OLGH6452 showPoolContents waiting connection requests value is incorrect
+OLGH6490 Test Failure (20190203-0423): PolicyExecutorTest.testConcurrentUpdateMaxWaitForEnqueue
+OLGH6518 Redundant log file in workarea after sever start with errror: java.lang.IllegalArgumentException: The property 'osgi.configuration.area' ... is being overriden ...
+OLGH6524 SSL Channel throws NullPointerException during stress
